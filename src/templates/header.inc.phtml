@@ -34,7 +34,11 @@ if (isset($_SESSION['user_id'])) {
     <link rel="icon" href="<?php echo Common::relativeUrlToAbsolute("/favicon.png"); ?>" type="image/png" sizes="48x48"/>
     <link rel="stylesheet" type="text/css" href="<?php echo Common::relativeUrlToAbsolute("/a/font/SourceSansPro-Regular-201508251844.css"); ?>"/>
     <link rel="stylesheet" type="text/css" href="<?php echo Common::relativeUrlToAbsolute("/a/font/SourceCodePro-Regular-201508251844.css"); ?>"/>
-    <script type="text/javascript" src="<?php echo Common::relativeUrlToAbsolute("/a/BNETDocs.js"); ?>"><![CDATA[]]></script>
+    <script type="text/javascript" src="<?php echo Common::relativeUrlToAbsolute("/a/BNETDocs.js"); ?>" async defer><![CDATA[]]></script>
+<?php if (isset($oauth_google) && $oauth_google) { ?>
+    <script type="text/javascript" src="<?php echo Common::relativeUrlToAbsolute("//apis.google.com/js/platform.js"); ?>" async defer><![CDATA[]]></script>
+    <meta name="google-signin-client_id" content="<?php echo Common::$config->oauth->google->client_id; ?>.apps.googleusercontent.com">
+<?php } ?>
     <link rel="alternate" href="<?php echo Common::relativeUrlToAbsolute("/news.rss"); ?>" type="application/rss+xml" title="BNETDocs News"/>
     <link rel="license" href="<?php echo Common::relativeUrlToAbsolute("/legal"); ?>"/>
     <meta name="keywords" content="battle.net,starcraft,warcraft,diablo,blizzard,logon sequences,packets,information,protocols,reference,programming,coding"/>

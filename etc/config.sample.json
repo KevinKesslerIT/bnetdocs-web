@@ -43,6 +43,12 @@
     "timeout": 3,
     "username": "bnetdocs"
   },
+  "oauth": {
+    "google": {
+      "client_id": "000000000000-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "client_secret": "xxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  },
   "recaptcha": {
     "secret": "google-provided-value",
     "sitekey": "google-provided-value",

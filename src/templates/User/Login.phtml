@@ -36,6 +36,7 @@ switch ($this->getContext()->error) {
     $message = $this->getContext()->error;
 }
 
+$oauth_google = true;
 $this->additional_css[] = "/a/forms.css";
 require("./header.inc.phtml");
 ?>
@@ -83,6 +84,9 @@ require("./header.inc.phtml");
               href="<?php echo Common::relativeUrlToAbsolute("/user/resetpassword"); ?>"
               tabindex="4"
             >Recover Password</a>
+          </section>
+          <section>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
           </section>
         </form>
 <?php } else { ?>
